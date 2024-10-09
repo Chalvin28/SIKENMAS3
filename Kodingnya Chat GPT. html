@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIKENMAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+.header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.hero {
+    background-image: url('path-to-your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.cta-button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+.content-section {
+    padding: 60px 20px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.artikel-item, .video-item, .infografis-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artikel-item:hover, .video-item:hover, .infografis-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.artikel-img, .video-img, .infografis-img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>SIKENMAS</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#infografis">Infografis</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di SIKENMAS</h2>
+            <p>Informasi terkini tentang sistem keamanan yang Anda butuhkan.</p>
+            <a href="#artikel" class="cta-button">Mulai Belajar</a>
+        </div>
+    </section>
+
+    <section id="artikel" class="content-section">
+        <h2>Artikel</h2>
+        <div class="grid-container">
+            <div class="artikel-item">
+                <h3>Keamanan Jaringan</h3>
+                <img src="path-to-your-image/network-security.jpg" alt="Keamanan Jaringan" class="artikel-img">
+                <p>Mempelajari cara melindungi jaringan Anda dari ancaman luar.</p>
+            </div>
+            <div class="artikel-item">
+                <h3>Keamanan Data</h3>
+                <img src="path-to-your-image/data-security.jpg" alt="Keamanan Data" class="artikel-img">
+                <p>Tips untuk melindungi data pribadi dan organisasi Anda.</p>
+            </div>
+            <div class="artikel-item">
+                <h3>Keamanan Aplikasi</h3>
+                <img src="path-to-your-image/application-security.jpg" alt="Keamanan Aplikasi" class="artikel-img">
+                <p>Menjaga aplikasi Anda dari potensi serangan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="content-section">
+        <h2>Video</h2>
+        <div class="video-item">
+            <h3>Pengenalan Keamanan Siber</h3>
+            <img src="path-to-your-image/cyber-security.jpg" alt="Keamanan Siber" class="video-img">
+            <p>Tonton video untuk memahami dasar-dasar keamanan siber.</p>
+        </div>
+    </section>
+
+    <section id="infografis" class="content-section">
+        <h2>Infografis</h2>
+        <div class="infografis-item">
+            <img src="path-to-your-image/security-infographic.jpg" alt="Infografis Keamanan" class="infografis-img">
+            <p>Infografis tentang tips keamanan yang perlu Anda ketahui.</p>
+        </div>
+    </section>
+
+    <section id="kontak" class="content-section">
+        <h2>Kontak Kami</h2>
+        <form>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <textarea id="pesan" name="pesan" placeholder="Pesan Anda" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SIKENMAS</p>
+    </footer>
+</body>
+</html>
